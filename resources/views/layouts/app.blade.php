@@ -30,14 +30,24 @@
             <!-- Page Content -->
             <main>
                 <div class="py-12">
-                    <div class="flex max-w-7xl mx-auto space-x-6 sm:px-6 lg:px-8">
+                    <div class="flex items-start max-w-7xl mx-auto space-x-6 sm:px-6 lg:px-8">
                         <section class="flex-auto bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                            <div class="p-6 text-gray-900">
-                                {{ $slot }}
-                            </div>
+                            {{ $slot }}
                         </section>
                         <aside class="w-1/4">
-                            Add Link
+                            <h3 class="text-xl text-slate-900">{{ __('form.instruction.title') }}</h3>
+                            <span class="text-sm leading-wide">{{ __('form.instruction.body') }}</span>
+                            <form method="POST" action="{{ route('link.store') }}" class="flex flex-col space-y-3">
+                                @csrf
+                                <div>
+                                    <x-input-label for="destination" :value="__('form.destination.label')" />
+                                    <x-text-input id="destination" class="block mt-1 w-full" type="text" name="destination" :value="old('destination')" required autofocus autocomplete="destination" />
+                                    <x-input-error :messages="$errors->get('destination')" class="mt-2" />
+                                </div>
+                                <div class="flex">
+                                    <x-primary-button>{{ __('form.submit') }}</x-primary-button>
+                                </div>
+                            </form>
                         </aside>
                     </div>
                 </div>

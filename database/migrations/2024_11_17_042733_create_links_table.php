@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('links', function (Blueprint $table) {
             $table->ulid('id');
-            $table->foreignId('user_id')->nullable()->index();
-            $table->string('ref_id');
+            $table->foreignId('user_id')->index();
+            $table->string('ref_id')->unique();
             $table->string('destination');
             $table->timestamps();
         });

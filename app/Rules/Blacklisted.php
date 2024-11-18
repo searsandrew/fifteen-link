@@ -23,7 +23,7 @@ class Blacklisted implements ValidationRule
         $response = Http::post(config('fifteen.phishTank'), $details);
         $details = $response->json();
 
-        if ($details['in_database']) {
+        if (!is_null($details) && $details['in_database']) {
             $fail(':attribute appears in our blacklist');
         }
     }
