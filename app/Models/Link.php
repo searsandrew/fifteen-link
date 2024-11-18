@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Str;
+use Shetabit\Visitor\Traits\Visitable;
 
 class Link extends Model
 {
-    use HasUlids;
+    use HasUlids, Visitable;
 
     protected $fillable = ['destination'];
 

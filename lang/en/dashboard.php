@@ -12,6 +12,10 @@ return [
             'reference' => 'Reference',
             'stats' => 'Stats',
             'tools' => 'Tools',
+        ],
+        'count' => [
+            'total' => 'Visits',
+            'unique' => 'Unique'
         ]
     ]
 ];
