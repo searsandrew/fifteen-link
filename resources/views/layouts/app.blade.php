@@ -29,7 +29,18 @@
 
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                <div class="py-12">
+                    <div class="flex max-w-7xl mx-auto space-x-6 sm:px-6 lg:px-8">
+                        <section class="flex-auto bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                            <div class="p-6 text-gray-900">
+                                {{ $slot }}
+                            </div>
+                        </section>
+                        <aside class="w-1/4">
+                            Add Link
+                        </aside>
+                    </div>
+                </div>
             </main>
         </div>
     </body>
