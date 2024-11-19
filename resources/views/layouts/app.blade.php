@@ -61,7 +61,11 @@
                         </aside>
                     </div>
                 </div>
-            <div class="ml-6 text-xs text-slate-400">{{ __('dashboard.developed') }} <a href="https://www.mayfifteenth.com/" class="hover:text-emerald-700">Mayfifteenth</a>.</div>
+                <div class="ml-6 text-xs text-slate-400">
+                    <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+                        <a property="dct:title" class="hover:text-emerald-400 hover:underline" rel="cc:attributionURL" href="https://github.com/searsandrew/fifteen-link">Fifteen Link v.{{ config('fifteen.version') }}</a> by <a rel="cc:attributionURL dct:creator" class="hover:text-emerald-400 hover:underline" property="cc:attributionName" href="https://github.com/searsandrew">Andrew Sears</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" class="hover:text-emerald-400 hover:underline">CC BY-SA 4.0</a>.
+                    </p>
+                </div>
             </main>
         </div>
     </body>
