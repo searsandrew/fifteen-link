@@ -16,19 +16,19 @@
 * symfony/mailgun-mailer: ^7.1
 
 **Features**
-[x] Create short link from pasted URL. URL is verified and checked against PhishTank.
-[x] Allow users to soft-delete link, making them invalid.
-[x] User account creation (Laravel Breeze + Blade).
-[x] Users can click a copy button to get shortened URL.
-[x] Track usage of link for both total and unique clicks.
+* [x] Create short link from pasted URL. URL is verified and checked against PhishTank.
+* [x] Allow users to soft-delete link, making them invalid.
+* [x] User account creation (Laravel Breeze + Blade).
+* [x] Users can click a copy button to get shortened URL.
+* [x] Track usage of link for both total and unique clicks.
 
 **To-do**
-[] Use Alpine for copying link, with visual feedback that link has been copied.
-[] Allow user to edit reference ID (possible make this a paid feature?).
-[] Build an info page for the links showing stats, edit, etc.
-[] Get PhishTank API key and implement usage + non-usage.
-[] Add other blacklist checking service.
-[] Teams?
+* [ ] Use Alpine for copying link, with visual feedback that link has been copied.
+* [ ] Allow user to edit reference ID (possible make this a paid feature?).
+* [ ] Build an info page for the links showing stats, edit, etc.
+* [ ] Get PhishTank API key and implement usage + non-usage.
+* [ ] Add other blacklist checking service.
+* [ ] Teams?
 
 **Notes**
 * Uses verified email addresses, so email service will need to be attached.
