@@ -68,8 +68,10 @@ class LinkController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Link $link)
     {
-        //
+        $link->delete();
+
+        return redirect(route('dashboard'))->with('status', 'Link has been deleted, you may recover it for up to thirty days.');
     }
 }

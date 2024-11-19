@@ -5,12 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 use Shetabit\Visitor\Traits\Visitable;
 
 class Link extends Model
 {
-    use HasUlids, Visitable;
+    use HasUlids, SoftDeletes, Visitable;
 
     protected $fillable = ['destination'];
 

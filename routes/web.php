@@ -2,14 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::middleware('auth')->group(function () {
     Route::middleware('verified')->group(function () {
+        Route::view('/', 'dashboard')->name('dashboard');
         Route::resource('link', App\Http\Controllers\LinkController::class);
-        Route::view('/dashboard', 'dashboard')->name('dashboard');
     });
     Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');

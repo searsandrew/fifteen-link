@@ -27,14 +27,24 @@
                 </header>
             @endisset
 
+            @if (session('status'))
+                <div x-data="{ show: true }" x-show="show" class="w-80 absolute top-3 right-3 bg-white p-6 rounded-lg shadow-lg border-2 border-slate-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" @click="show = false" fill="currentColor" class="text-slate-200 hover:text-red-400 size-5 absolute top-2 right-2 cursor-pointer" viewBox="0 0 384 512">
+                        <!--!Font Awesome Free 6.7.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+                    </svg>
+                    {{ session('status') }}
+                </div>
+            @endif
+
             <!-- Page Content -->
-            <main>
+            <main class="max-w-7xl mx-auto">
                 <div class="py-12">
-                    <div class="flex items-start max-w-7xl mx-auto space-x-6 sm:px-6 lg:px-8">
+                    <div class="flex items-start space-x-6 sm:px-6 lg:px-8">
                         <section class="flex-auto bg-white overflow-hidden shadow-sm sm:rounded-lg">
                             {{ $slot }}
                         </section>
-                        <aside class="w-1/4">
+                        <aside class="flex-0 w-1/4">
                             <h3 class="text-xl text-slate-900">{{ __('form.instruction.title') }}</h3>
                             <span class="text-sm leading-wide">{{ __('form.instruction.body') }}</span>
                             <form method="POST" action="{{ route('link.store') }}" class="flex flex-col space-y-3">
@@ -51,6 +61,7 @@
                         </aside>
                     </div>
                 </div>
+            <div class="ml-6 text-xs text-slate-400">{{ __('dashboard.developed') }} <a href="https://www.mayfifteenth.com/" class="hover:text-emerald-700">Mayfifteenth</a>.</div>
             </main>
         </div>
     </body>

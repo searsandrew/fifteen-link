@@ -2,6 +2,7 @@
 
 return [
     'dashboard' => 'Dashboard',
+    'developed' => 'Developed by',
     'link' => [
         'not-found' => [
             'title' => 'No links have been created',
