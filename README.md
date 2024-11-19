@@ -12,6 +12,8 @@
 * bakame/laravel-domain-parser: ^1.3
 * laravel/tinker: ^2.9
 * shetabit/visitor: ^4.3
+* symfony/http-client: ^7.1
+* symfony/mailgun-mailer: ^7.1
 
 **Features**
 [x] Create short link from pasted URL. URL is verified and checked against PhishTank.
